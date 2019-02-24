@@ -11,37 +11,36 @@ import consola from 'consola';
 
 const filename = '<%= options.filename %>';
 
-export default ( context, inject ) => {
+/**
+ * Retrive cached payload data.
+ * @param {String} path Page path for payload data to retrive. (Ex: context.route.path)
+ * @return {Promise<object>} Promise contains retrived payload object (JSON serialized). Resolved with null when it is called in non-generated environment or failed to fetch.
+ */
+async function getPayload( path ) {
 
-  const isStatic = context.isStatic;
+  // Retrive path to payload
+  const filePath = joinPath( path, filename );
 
-  context.getPayload = async path => {
+  // is on generated site && is not in process of generate
+  if( isStatic && process.client ) {
 
-    // Retrive path to payload
-    const filePath = joinPath( path, filename );
+    try {
 
-    // is on generated site && is not in process of generate
-    if( isStatic && process.client ) {
+      return ( await axios.get( filePath ) ).data;
 
-      try {
-
-        return ( await axios.get( filePath ) ).data;
-
-      }catch( e ) {
-
-        return null;
-
-      }
-
-    }else {
+    }catch( e ) {
 
       return null;
 
     }
 
-  };
+  }else {
 
-};
+    return null;
+
+  }
+
+}
 
 // Helper method to join path fragments
 function joinPath( ...fragments ) {
@@ -49,3 +48,11 @@ function joinPath( ...fragments ) {
   return fragments.join( '/' ).replace( /\/{1,}/g, '/' );
 
 }
+
+export default ( context, inject ) => {
+
+  const isStatic = context.isStatic;
+
+  context.getPayload = getPayload;
+
+};
