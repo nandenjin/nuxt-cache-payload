@@ -11,9 +11,11 @@ import consola from 'consola';
 
 const filename = '<%= options.filename %>';
 
-export default ( { app, route, isStatic }, inject ) => {
+export default ( context, inject ) => {
 
-  app.getPayload = async path => {
+  const isStatic = context.isStatic;
+
+  context.getPayload = async path => {
 
     // Retrive path to payload
     const filePath = joinPath( path, filename );
