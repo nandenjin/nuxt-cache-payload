@@ -1,0 +1,13 @@
+{
+  "name": "nuxt-cache-payload",
+  "version": "0.0.0",
+  "description": "Cache payload on Static Site Generate by Nuxt.js",
+  "main": "index.js",
+  "repository": "https://github.com/nandenjin/nuxt-cache-payload",
+  "author": "Kazumi Inada <hello@nandenjin.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "consola": "^2.5.3"
+  }
+}
