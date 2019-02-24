@@ -4,7 +4,7 @@
 ![Dependencies](https://david-dm.org/nandenjin/nuxt-cache-payload.svg)
 
 ## What's this
-This is a module to generate cache file for `nuxt generate`ed sites. 
+This is a module to generate cache file for `nuxt generate`ed sites.
 
 By default, Nuxt provides payload object from `config.generate()` only on first one page of the session. Other pages that are navigated programmably such as by `<nuxt-link>` cannot get payload objects.
 
@@ -51,25 +51,30 @@ exports default {
 
 Module generate cache files with `nuxt generate` and it can be fetched by using `context.getPayload()` inside `asyncData()`.
 
+**Note:** Cache files will be generated only with `nuxt generate` and `context.getPayload()` will returns `null` when called in non-static environment. You should fetch payload data manually from original source in devMode or at server-side rendering.
+
 ## Options
 ```js
 // nuxt.config.js
 module.exports = {
   modules: [
     [ 'nuxt-cache-payload', {
-      
+
       // Custom file for cache files (optional).
       // Default: '_payload.${randomHash}.json'
       filename: 'cachefile.json',
-      
+
       // Encoding of cache files (optional).
       // Default: 'utf8'
       encoding: 'utf8',
-      
+
     } ];
   ]
 };
 ```
+
+## Contributing
+Pull requests or feature requests are welcome. Please submit them from GitHub.
 
 ## License
 MIT License: Copyright (c) Kazumi Inada
