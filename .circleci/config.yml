@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  lint:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn --frozen-lockfile
+      - run: yarn lint
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+workflows:
+  version: 2
+  lint:
+    jobs:
+      - lint

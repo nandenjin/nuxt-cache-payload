@@ -1,8 +1,10 @@
 # 🗄 nuxt-cache-payload
+
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![CircleCI](https://circleci.com/gh/nandenjin/nuxt-cache-payload.svg?style=shield)](https://circleci.com/gh/nandenjin/nuxt-cache-payload)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9ecd9efd584ef69a51cc/maintainability)](https://codeclimate.com/github/nandenjin/nuxt-cache-payload/maintainability)
-![Dependencies](https://david-dm.org/nandenjin/nuxt-cache-payload.svg)
-![devDependencies](https://david-dm.org/nandenjin/nuxt-cache-payload/dev-status.svg)
+[![Dependencies](https://david-dm.org/nandenjin/nuxt-cache-payload.svg)](https://david-dm.org/nandenjin/nuxt-cache-payload)
+[![devDependencies](https://david-dm.org/nandenjin/nuxt-cache-payload/dev-status.svg)](https://david-dm.org/nandenjin/nuxt-cache-payload?type=dev)
 
 ## What's this
 This is a module to generate cache file for `nuxt generate`ed sites.
