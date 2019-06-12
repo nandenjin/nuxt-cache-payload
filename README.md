@@ -2,6 +2,7 @@
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9ecd9efd584ef69a51cc/maintainability)](https://codeclimate.com/github/nandenjin/nuxt-cache-payload/maintainability)
 ![Dependencies](https://david-dm.org/nandenjin/nuxt-cache-payload.svg)
+![devDependencies](https://david-dm.org/nandenjin/nuxt-cache-payload/dev-status.svg)
 
 ## What's this
 This is a module to generate cache file for `nuxt generate`ed sites.
