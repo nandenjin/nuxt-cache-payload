@@ -6,7 +6,6 @@
 */
 
 import axios from 'axios'
-import consola from 'consola'
 
 const filename = '<%= options.filename %>'
 

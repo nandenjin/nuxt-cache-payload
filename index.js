@@ -24,10 +24,10 @@ module.exports = function cachePayload(options = {}) {
   const filename = options.filename || `_payload.${hash}.json`
   const encoding = options.encoding || 'utf8'
 
-  let routes
+  const routes = []
 
   // Hook for generated routes
-  nuxt.hook('generate:extendRoutes', r => routes = [ ...r ])
+  nuxt.hook('generate:extendRoutes', r => routes.push(...r))
 
   // Hook for end of generate
   nuxt.hook('generate:done', () => generateCacheFiles(routes, { distPath, filename, encoding }))
