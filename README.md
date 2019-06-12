@@ -1,5 +1,6 @@
 # 🗄 nuxt-cache-payload
 
+[![npm version](https://badge.fury.io/js/nuxt-cache-payload.svg)](https://badge.fury.io/js/nuxt-cache-payload)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![CircleCI](https://circleci.com/gh/nandenjin/nuxt-cache-payload.svg?style=shield)](https://circleci.com/gh/nandenjin/nuxt-cache-payload)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9ecd9efd584ef69a51cc/maintainability)](https://codeclimate.com/github/nandenjin/nuxt-cache-payload/maintainability)
