@@ -10,18 +10,20 @@
 ## What's this
 This is a module to generate cache file for `nuxt generate`ed sites.
 
-By default, Nuxt provides payload object from `config.generate()` only on first one page of the session. Other pages that are navigated programmably such as by `<nuxt-link>` cannot get payload objects.
+By default, Nuxt provides payload object from `config.generate.routes()` only on first one page of the session. Other pages that are navigated programmably such as by `<nuxt-link>` cannot get payload objects.
 
 ```js
 // nuxt.config.js
 module.exports = {
-  generate() {
-    return [
-      {
-        route: '/dynamic/routed/page',
-        payload: await fetchPagePayload(), // Get something from network resource, etc.
-      }
-    ];
+  generate: {
+    routes() {
+      return [
+        {
+          route: '/dynamic/routed/page',
+          payload: await fetchPagePayload(), // Get something from network resource, etc.
+        }
+      ];
+    }
   }
 };
 
