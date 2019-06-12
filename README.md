@@ -31,7 +31,7 @@ exports default {
 ```
 If `fetchPagePayload()` contains heavy process (Ex: with long latency), it delays page loading.
 
-This modules generate cache files of payload object from `config.generate()` and able to **build 100% static sites.**
+This modules generate cache files of payload object from `config.generate()` and make it to be able to **reduce payload generate requests.**
 
 ## Usage
 Install with `npm install nuxt-cache-payload` and [register in `nuxt.config.js`](https://nuxtjs.org/api/configuration-modules).
