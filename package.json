@@ -1,6 +1,6 @@
 {
   "name": "nuxt-cache-payload",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cache payload on Static Site Generate by Nuxt.js",
   "main": "index.js",
   "repository": "https://github.com/nandenjin/nuxt-cache-payload",
