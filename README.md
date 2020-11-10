@@ -7,6 +7,20 @@
 [![Dependencies](https://david-dm.org/nandenjin/nuxt-cache-payload.svg)](https://david-dm.org/nandenjin/nuxt-cache-payload)
 [![devDependencies](https://david-dm.org/nandenjin/nuxt-cache-payload/dev-status.svg)](https://david-dm.org/nandenjin/nuxt-cache-payload?type=dev)
 
+## 💡 ATTENTION PLEASE - you may not need this now 🤔
+
+From `nuxt@2.14.0`, Nuxt supports [**full static generation** that enables you to mock `asyncData()` and `fetch()` natively](https://ja.nuxtjs.org/blog/going-full-static/). By using this, you may not need to install `nuxt-cache-payload`.
+
+As the way to the end of its mission, `nuxt-cache-payload` is now going to deprecated status.
+
+* Only severe security fix will provided.
+* No more features will be added.
+* In the future this repo will be archived and in read-only mode.
+
+If you are using this package for your existing project, please consider upgrading Nuxt.js and using native full static generation. **It is NOT recommended using this package for new project.**
+
+---
+
 ## What's this
 This is a module to generate cache file for `nuxt generate`ed sites.
 
